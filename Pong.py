@@ -16,7 +16,6 @@ paddle2Pos = paddle2X, paddle2Y = 993, 415
 paddle1 = pygame.Rect(paddle1X, paddle1Y, paddleWidth, paddleHeight)
 paddle2 = pygame.Rect(paddle2X, paddle2Y, paddleWidth, paddleHeight)
 paddleSpeed = 1000
-hits = 0
 
 def move_paddles(paddle1, paddle2, deltaTime):
     keys = pygame.key.get_pressed()
