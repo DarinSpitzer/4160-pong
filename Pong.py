@@ -21,13 +21,13 @@ hits = 0
 def move_paddles(paddle1, paddle2, deltaTime):
     keys = pygame.key.get_pressed()
     if (keys[pygame.K_UP]):
-        paddle1.move_ip(0, -paddleSpeed * deltaTime)
-    elif (keys[pygame.K_DOWN]):
-        paddle1.move_ip(0, paddleSpeed * deltaTime)
-    if (keys[pygame.K_w]):
         paddle2.move_ip(0, -paddleSpeed * deltaTime)
-    elif (keys[pygame.K_s]):
+    elif (keys[pygame.K_DOWN]):
         paddle2.move_ip(0, paddleSpeed * deltaTime)
+    if (keys[pygame.K_w]):
+        paddle1.move_ip(0, -paddleSpeed * deltaTime)
+    elif (keys[pygame.K_s]):
+        paddle1.move_ip(0, paddleSpeed * deltaTime)
     paddle1.clamp_ip(boundsRect)
     paddle2.clamp_ip(boundsRect)
     
